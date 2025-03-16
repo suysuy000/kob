@@ -9,7 +9,7 @@ const Home = () => {
     <div className="bg-black text-white min-h-screen">
       <Header />
       <main className="text-center py-20">
-        <h1 className="text-4xl font-bold">Welcome to Kobweb</h1>
+        <h1 className="text-6xl font-bold">Welcome to Kobweb</h1>
         <p className="text-lg mt-2">
           Your professional network for business connections and opportunities
         </p>

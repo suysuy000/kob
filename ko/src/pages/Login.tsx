@@ -3,7 +3,7 @@ import React from "react";
 const Login: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
-      <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-96">
+      <div className="bg-gray-900 p-8 rounded-2xl shadow-lg w-[420px]">
         <h2 className="text-white text-2xl font-bold text-center mb-2"></h2>
         <h3 className="text-gray-300 text-lg font-semibold text-center mb-4">Sign In</h3>
         <p className="text-gray-400 text-center text-sm mb-6">
@@ -27,7 +27,7 @@ const Login: React.FC = () => {
 
         <p className="text-gray-400 text-center text-sm mb-3">Or continue with</p>
 
-        <button className="w-full p-3 bg-red-600 text-white font-semibold rounded-lg mb-3">
+        <button className="w-full p-3 bg-blue-600 text-white font-semibold rounded-lg mb-3">
           Sign in with Google
         </button>
         <button className="w-full p-3 bg-gray-700 text-white font-semibold rounded-lg">
