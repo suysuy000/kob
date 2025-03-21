@@ -1,8 +1,10 @@
 import { FaUser, FaNetworkWired, FaEnvelope, FaBell, FaCog, FaGithub, FaStickyNote, FaComments } from "react-icons/fa";
 import NetworkView from "../components/TreePage";
+import { useNavigate } from "react-router-dom";
 
 
 const BusinessCardPage = () => {
+  const navigate = useNavigate();
   
   return (
     <div className="flex h-screen bg-black text-white">
@@ -13,10 +15,10 @@ const BusinessCardPage = () => {
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
             <FaUser /> 내 명함관리
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button onClick={() => navigate("/NetworkMain")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaNetworkWired /> 명함 관계도
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button onClick={() => navigate("/ms")}className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaEnvelope /> 메시지
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
