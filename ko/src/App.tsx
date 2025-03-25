@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import BusinessCardPage from './pages/BusinessCard';
 import CR from './pages/CardRegistration';
 import ChatApp from './pages/Message';
+import ResumePage from './pages/Resume';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/bs" element={<BusinessCardPage />} />
       <Route path="/cr" element={<CR />} />
       <Route path="/ms" element={<ChatApp/>} />
+      <Route path="/rs" element={<ResumePage/>} />
       
     </Routes>
 
