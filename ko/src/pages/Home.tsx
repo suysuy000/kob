@@ -15,7 +15,7 @@ const Home = () => {
         </p>
         <div className="mt-6 flex justify-center space-x-4">
           <Button onClick={() => navigate("/login")}>Get Started</Button>
-          <Button>Learn More</Button>
+          <Button onClick={() => navigate("/resume")}>Learn More</Button>
         </div>
       </main>
 
