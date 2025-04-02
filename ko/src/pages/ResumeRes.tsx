@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ResumePage = () => {
   const [aboutMe, setAboutMe] = useState("");
@@ -22,6 +23,7 @@ const ResumePage = () => {
     setSkills([...skills, ""]);
   };
 
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-black text-white flex">
@@ -32,7 +34,7 @@ const ResumePage = () => {
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
             My resume
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
             Resume hub
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
@@ -134,6 +136,7 @@ const ResumePage = () => {
           </div>
           <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addSkill}>+ Add Skill</button>
         </div>
+        <button className="bg-gray-500 px-4 py-2 rounded mt-2" onClick={() => navigate("/resume")}>Register</button>
       </div>
     </div>
   );

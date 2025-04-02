@@ -7,6 +7,7 @@ import CR from './pages/CardRegistration';
 import ChatApp from './pages/Message';
 import ResumePage from './pages/ResumeRes';
 import Resume from './pages/Resume';
+import ResumeHub from './pages/ResumeHub';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/ms" element={<ChatApp/>} />
       <Route path="/rs" element={<ResumePage/>} />
       <Route path="/resume" element={<Resume/>} />
+      <Route path="/resumehub" element={<ResumeHub/>} />
       
     </Routes>
 
