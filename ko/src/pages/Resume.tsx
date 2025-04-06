@@ -11,7 +11,7 @@ const Resume: React.FC = () => {
         <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1> {/* 더 크게 */}
         <nav className="flex flex-col gap-2 text-xl"> {/* 전체 메뉴 글씨 키움 */}
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700" onClick={() => navigate("/resume")}>
-            My resume
+            Resume
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
             Resume hub

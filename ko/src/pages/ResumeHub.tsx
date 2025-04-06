@@ -41,7 +41,7 @@ export default function ResumeHub() {
       <h2 className="text-2xl mb-4">Resume Hub</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {resumes.map((resume, index) => (
-          <div key={index} className="p-4 bg-gray-800 text-white rounded-lg relative">
+          <div key={index} onClick={() => navigate("/resume")} className="p-4 bg-gray-800 text-white rounded-lg relative">
             <div className="flex items-center space-x-4">
               <img src={resume.avatar} alt={resume.name} className="w-12 h-12 rounded-full" />
               <div>

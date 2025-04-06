@@ -32,7 +32,7 @@ const ResumePage = () => {
         <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1>
         <nav className="flex flex-col gap-2 text-xl">
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
-            My resume
+            Resume
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
             Resume hub
