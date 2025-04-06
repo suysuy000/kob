@@ -29,8 +29,8 @@ const ResumePage = () => {
     <div className="min-h-screen bg-black text-white flex">
       {/* 사이드바 */}
       <div className="w-64 bg-black p-4 flex flex-col gap-4 border border-white/20">
-        <h1 className="text-xl font-bold">kobweb</h1>
-        <nav className="flex flex-col gap-2">
+        <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1>
+        <nav className="flex flex-col gap-2 text-xl">
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
             My resume
           </button>

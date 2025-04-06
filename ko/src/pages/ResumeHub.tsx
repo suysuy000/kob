@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Moon, Sun } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 type Resume = {
   name: string;
@@ -27,25 +28,26 @@ const resumes: Resume[] = [
 
 export default function ResumeHub() {
   const [darkMode, setDarkMode] = useState(true);
+  const navigate = useNavigate();
 
   return (
     <div className={`min-h-screen p-6 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold">Resume Hub</h1>
+        <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1>
         <div className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </div>
       </div>
-      <h2 className="text-xl mb-4">Browse Resumes</h2>
+      <h2 className="text-2xl mb-4">Resume Hub</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {resumes.map((resume, index) => (
           <div key={index} className="p-4 bg-gray-800 text-white rounded-lg relative">
             <div className="flex items-center space-x-4">
               <img src={resume.avatar} alt={resume.name} className="w-12 h-12 rounded-full" />
               <div>
-                <h3 className="text-lg font-semibold">{resume.role}</h3>
-                <p className="text-sm opacity-70">{resume.location}</p>
-                <p className="text-sm mt-2">❤️ {resume.likes} likes</p>
+                <h3 className="text-xl font-semibold">{resume.role}</h3>
+                <p className="text-lg opacity-70">{resume.location}</p>
+                <p className="text-lg mt-2">❤️ {resume.likes} likes</p>
               </div>
             </div>
             <span className={`absolute top-2 right-2 px-2 py-1 text-xs font-bold rounded ${resume.status === "Employed" ? "bg-green-600" : "bg-gray-600"}`}>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CR = () => {
   const [formData, setFormData] = useState({
@@ -16,8 +17,16 @@ const CR = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-black text-white flex justify-center items-center p-6">
+      <header className="absolute top-0 left-0 p-6">
+        <h1 className="text-white text-4xl font-bold hover:text-gray-300" onClick={() => navigate("/")}>
+          kobweb
+        </h1>
+      </header>
+
       <div className="w-full max-w-5xl flex gap-6">
         {/* Form Section */}
         <div className="bg-zinc-900 p-6 rounded-lg flex-1">

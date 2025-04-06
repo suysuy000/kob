@@ -1,16 +1,19 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Resume: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-black text-white flex">
       {/* 사이드바 */}
       <div className="w-64 bg-black p-4 flex flex-col gap-4 border border-white/20">
-        <h1 className="text-xl font-bold">kobweb</h1>
-        <nav className="flex flex-col gap-2">
-          <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
+        <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1> {/* 더 크게 */}
+        <nav className="flex flex-col gap-2 text-xl"> {/* 전체 메뉴 글씨 키움 */}
+          <button className="flex items-center gap-2 p-2 rounded bg-gray-700" onClick={() => navigate("/resume")}>
             My resume
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
             Resume hub
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
@@ -21,6 +24,7 @@ const Resume: React.FC = () => {
           </button>
         </nav>
       </div>
+
       
       {/* Main Content */}
       <main className="flex-1 p-8">
