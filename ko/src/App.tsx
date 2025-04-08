@@ -9,6 +9,8 @@ import ResumePage from './pages/ResumeRes';
 import Resume from './pages/Resume';
 import ResumeHub from './pages/ResumeHub';
 import NetworkPage from './pages/NetworkMain';
+import NotificationsPage from './pages/Notification';
+import SettingsPage from './pages/Settings';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/bs" element={<BusinessCardPage />} />
       <Route path="/network" element={<NetworkPage />} />
+      <Route path="/noti" element={<NotificationsPage />} />
+      <Route path="/set" element={<SettingsPage />} />
       <Route path="/cr" element={<CR />} />
       <Route path="/ms" element={<ChatApp/>} />
       <Route path="/rs" element={<ResumePage/>} />
