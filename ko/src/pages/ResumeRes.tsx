@@ -2,6 +2,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ResumePage = () => {
+  const [name, setName] = useState("");
+  const [job, setJob] = useState("");
+  const [keywords, setKeywords] = useState(["", "", ""]);
+
+  const handleKeywordChange = (index: number, value: string) => {
+    const newKeywords = [...keywords];
+    newKeywords[index] = value;
+    setKeywords(newKeywords);
+  };
+
   const [aboutMe, setAboutMe] = useState("");
   const [experience, setExperience] = useState([
     { title: "", period: "", location: "", description: "" },
@@ -32,16 +42,16 @@ const ResumePage = () => {
         <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1>
         <nav className="flex flex-col gap-2 text-xl">
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
-            Resume
+            이력서
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
-            Resume hub
+            이력서 몰아보기
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            Messages
+            메시지
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            Settings
+            설정
           </button>
         </nav>
       </div>
@@ -50,22 +60,40 @@ const ResumePage = () => {
         {/* Profile Header */}
         <div className="bg-gray-800 p-6 rounded-lg flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-2xl font-bold">Sarah Johnson</h1>
-            <p className="text-gray-400">Senior Product Designer</p>
+          <h2 className="text-2xl font-bold">이력서</h2>
+            <input
+              placeholder="이름"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-full p-2 bg-gray-700 rounded"
+            />
+            <div className="flex gap-2 mt-2"></div>
+            <input
+              placeholder="직업"
+              value={job}
+              onChange={(e) => setJob(e.target.value)}
+              className="w-full p-2 bg-gray-700 rounded"
+            />
             <div className="flex gap-2 mt-2">
-              <span className="bg-gray-700 px-3 py-1 rounded text-sm">UX/UI Design</span>
-              <span className="bg-gray-700 px-3 py-1 rounded text-sm">Product Strategy</span>
-              <span className="bg-gray-700 px-3 py-1 rounded text-sm">Team Leadership</span>
+              {keywords.map((kw, idx) => (
+              <input
+                key={idx}
+                placeholder={`키워드 ${idx + 1}`}
+                value={kw}
+                onChange={(e) => handleKeywordChange(idx, e.target.value)}
+                className="w-full p-2 bg-gray-700 rounded"
+              />
+            ))}
             </div>
           </div>
           <div>
-            <button className="bg-gray-700 px-4 py-2 rounded mr-2">Message</button>
-            <button className="bg-white text-black px-4 py-2 rounded">Connect</button>
+            <button className="bg-gray-700 px-4 py-2 rounded mr-2">메시지</button>
+            <button className="bg-white text-black px-4 py-2 rounded">연결</button>
           </div>
         </div>
         {/* About Me */}
         <div className="bg-gray-800 p-6 rounded-lg mb-6">
-          <h2 className="text-xl font-bold mb-2">About Me</h2>
+          <h2 className="text-xl font-bold mb-2">자기소개</h2>
           <textarea
             className="w-full p-2 bg-gray-700 rounded"
             rows={3}
@@ -76,7 +104,7 @@ const ResumePage = () => {
         </div>
         {/* Experience */}
         <div className="bg-gray-800 p-6 rounded-lg mb-6">
-          <h2 className="text-xl font-bold mb-4">Experience</h2>
+          <h2 className="text-xl font-bold mb-4">경력</h2>
           {experience.map((exp, index) => (
             <div key={index} className="mb-4 p-4 bg-gray-700 rounded">
               <input type="text" placeholder="Job Title" className="w-full bg-gray-600 p-2 mb-2 rounded" value={exp.title} onChange={(e) => {
@@ -101,11 +129,11 @@ const ResumePage = () => {
               }} />
             </div>
           ))}
-          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addExperience}>+ Add Experience</button>
+          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addExperience}>+ 추가</button>
         </div>
         {/* Education */}
         <div className="bg-gray-800 p-6 rounded-lg mb-6">
-          <h2 className="text-xl font-bold mb-4">Education</h2>
+          <h2 className="text-xl font-bold mb-4">학력</h2>
           {education.map((edu, index) => (
             <div key={index} className="mb-4 p-4 bg-gray-700 rounded">
               <input type="text" placeholder="Degree" className="w-full bg-gray-600 p-2 mb-2 rounded" value={edu.degree} onChange={(e) => {
@@ -120,11 +148,11 @@ const ResumePage = () => {
               }} />
             </div>
           ))}
-          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addEducation}>+ Add Education</button>
+          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addEducation}>+ 추가</button>
         </div>
         {/* Skills */}
         <div className="bg-gray-800 p-6 rounded-lg">
-          <h2 className="text-xl font-bold mb-4">Skills</h2>
+          <h2 className="text-xl font-bold mb-4">스킬</h2>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
               <input key={index} type="text" placeholder="Skill" className="bg-gray-600 p-2 rounded" value={skill} onChange={(e) => {
@@ -134,9 +162,9 @@ const ResumePage = () => {
               }} />
             ))}
           </div>
-          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addSkill}>+ Add Skill</button>
+          <button className="bg-blue-500 px-4 py-2 rounded mt-2" onClick={addSkill}>+ 추가</button>
         </div>
-        <button className="bg-gray-500 px-4 py-2 rounded mt-2" onClick={() => navigate("/resume")}>Register</button>
+        <button className="bg-gray-500 px-4 py-2 rounded mt-2" onClick={() => navigate("/resume")}>이력서 등록</button>
       </div>
     </div>
   );

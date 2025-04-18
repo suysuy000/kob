@@ -24,9 +24,6 @@ const BusinessCardPage = () => {
           <button onClick={() => navigate("/noti")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaBell /> 알림
           </button>
-          <button onClick={() => navigate("/set")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            <FaCog /> 설정
-          </button>
         </nav>
       </div>
 
@@ -35,9 +32,9 @@ const BusinessCardPage = () => {
         {/* 🔍 검색창 & 필터 버튼 */}
         <div className="mb-4 flex items-center gap-2">
           <input type="text" placeholder="Search..." className="flex-1 p-2 bg-gray-950 rounded border border-white/20" />
-          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-gray-600">All Companies</button>
-          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-gray-600">Departments</button>
-          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-red-600">Reset Filter</button>
+          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-gray-600">회사별</button>
+          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-gray-600">부서별</button>
+          <button className="px-3 py-1 bg-black rounded border border-white/20 hover:bg-red-600">필터 초기화</button>
         </div>
 
         <div className="flex gap-4">
@@ -46,11 +43,11 @@ const BusinessCardPage = () => {
             <div className="flex justify-between items-center">
               <span className="text-green-400">Mark</span>
               <button className="flex items-center gap-1 px-3 py-1 border border-gray-700 rounded-lg">
-                <FaComments className="w-4 h-4" /> Messages
+                <FaComments className="w-4 h-4" /> 메시지
               </button>
             </div>
 
-            <p className="text-gray-400 text-sm">Product Designer</p>
+            <p className="text-gray-400 text-sm">프로덕트 디자이너</p>
 
             <div className="mt-4 flex flex-col gap-2">
               <div className="flex items-center gap-2">

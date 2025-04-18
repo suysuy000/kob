@@ -15,7 +15,7 @@ const chats: Chat[] = [
 ];
   
 
-const ChatApp  = () => {
+const MessagePage  = () => {
   const [selectedChat, setSelectedChat] = useState(chats[0]);
   
   const navigate = useNavigate();
@@ -28,18 +28,16 @@ const ChatApp  = () => {
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/bs")}>
             <FaUser /> 내 명함관리
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button onClick={() => navigate("/network")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaNetworkWired /> 명함 관계도
           </button>
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700">
             <FaEnvelope /> 메시지
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button onClick={() => navigate("/noti")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaBell /> 알림
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            <FaCog /> 설정
-          </button>
+          
         </nav>
       </div>
       {/* Chat List */}
@@ -100,4 +98,4 @@ function ChatBubble({ text, time, sender = false }: ChatBubbleProps) {
   );
 }
 
-export default ChatApp;
+export default MessagePage

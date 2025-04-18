@@ -13,10 +13,9 @@ const Login: React.FC = () => {
       </header>
 
       <div className="bg-gray-900 p-10 rounded-2xl shadow-lg w-[480px]"> {/* 크기 키운 부분 */}
-        <h2 className="text-white text-3xl font-bold text-center mb-3">My Network</h2> {/* 글자도 살짝 키움 */}
-        <h3 className="text-gray-300 text-xl font-semibold text-center mb-4">Sign In</h3>
+        <h2 className="text-white text-3xl font-bold text-center mb-3">로그인</h2> {/* 글자도 살짝 키움 */}
         <p className="text-gray-400 text-center text-sm mb-6">
-          Enter your credentials to access your account
+          계정정보를 입력하여 로그인 하세요
         </p>
 
         <input
@@ -31,7 +30,7 @@ const Login: React.FC = () => {
         />
 
         <button className="w-full p-3 bg-white text-black font-semibold rounded-lg mb-3">
-          Sign In
+          로그인
         </button>
 
         <p className="text-gray-400 text-center text-sm mb-3">Or continue with</p>

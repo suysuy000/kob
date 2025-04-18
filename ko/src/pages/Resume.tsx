@@ -11,16 +11,16 @@ const Resume: React.FC = () => {
         <h1 className="text-4xl font-bold" onClick={() => navigate("/")}>kobweb</h1> {/* 더 크게 */}
         <nav className="flex flex-col gap-2 text-xl"> {/* 전체 메뉴 글씨 키움 */}
           <button className="flex items-center gap-2 p-2 rounded bg-gray-700" onClick={() => navigate("/resume")}>
-            Resume
+            이력서
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700" onClick={() => navigate("/resumehub")}>
-            Resume hub
+            이력서 몰아보기
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            Messages
+            메시지
           </button>
           <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            Settings
+            설정
           </button>
         </nav>
       </div>
@@ -38,31 +38,31 @@ const Resume: React.FC = () => {
             <span className="bg-gray-700 px-3 py-1 rounded-lg ml-2">Team Leadership</span>
           </div>
           <div className="absolute top-6 right-6 flex space-x-4">
-            <button className="px-4 py-2 bg-gray-700 rounded-lg">Message</button>
-            <button className="px-4 py-2 bg-blue-600 rounded-lg">Connect</button>
+            <button className="px-4 py-2 bg-gray-700 rounded-lg">메시지</button>
+            <button className="px-4 py-2 bg-blue-600 rounded-lg">연결</button>
           </div>
         </div>
         
         {/* Experience Section */}
         <div className="mt-6 bg-gray-800 p-6 rounded-lg">
-          <h2 className="text-lg font-semibold">Experience</h2>
+          <h2 className="text-lg font-semibold">경력</h2>
           <div className="mt-4">
             <h3 className="font-bold">Senior Product Designer</h3>
             <p className="text-gray-400">Tech Corp (2020 - Present)</p>
             <p className="text-gray-400">San Francisco, CA</p>
-            <p className="mt-2">Led the redesign of core products resulting in 40% increase in user engagement.</p>
+            
           </div>
           <div className="mt-4">
             <h3 className="font-bold">Product Designer</h3>
             <p className="text-gray-400">Design Studio (2018 - 2020)</p>
             <p className="text-gray-400">New York, NY</p>
-            <p className="mt-2">Collaborated with cross-functional teams to deliver user-centered design solutions.</p>
+            
           </div>
         </div>
 
         {/* Education Section */}
         <div className="mt-6 bg-gray-800 p-6 rounded-lg">
-          <h2 className="text-lg font-semibold">Education</h2>
+          <h2 className="text-lg font-semibold">학력</h2>
           <div className="mt-4">
             <h3 className="font-bold">Master of Design</h3>
             <p className="text-gray-400">Design University (2016 - 2018)</p>
@@ -72,7 +72,7 @@ const Resume: React.FC = () => {
 
         {/* Skills Section */}
         <div className="mt-6 bg-gray-800 p-6 rounded-lg">
-          <h2 className="text-lg font-semibold">Skills</h2>
+          <h2 className="text-lg font-semibold">스킬</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             <span className="bg-gray-700 px-3 py-1 rounded-lg">UI/UX Design</span>
             <span className="bg-gray-700 px-3 py-1 rounded-lg">Product Strategy</span>

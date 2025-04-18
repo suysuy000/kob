@@ -20,12 +20,10 @@ const NetworkPage = () => {
           <button onClick={() => navigate("/ms")}className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaEnvelope /> 메시지
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
+          <button onClick={() => navigate("/noti")} className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
             <FaBell /> 알림
           </button>
-          <button className="flex items-center gap-2 p-2 rounded hover:bg-gray-700">
-            <FaCog /> 설정
-          </button>
+          
         </nav>
       </div>
 

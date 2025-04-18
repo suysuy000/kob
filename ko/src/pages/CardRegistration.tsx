@@ -30,10 +30,10 @@ const CR = () => {
       <div className="w-full max-w-5xl flex gap-6">
         {/* Form Section */}
         <div className="bg-zinc-900 p-6 rounded-lg flex-1">
-          <h1 className="text-xl font-bold text-blue-400 mb-4">Business Card Registration</h1>
+          <h1 className="text-xl font-bold text-blue-400 mb-4">명함 등록</h1>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm mb-1">Name</label>
+              <label className="block text-sm mb-1">이름</label>
               <input
                 type="text"
                 name="name"
@@ -44,7 +44,7 @@ const CR = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm mb-1">Email</label>
+                <label className="block text-sm mb-1">이메일</label>
                 <input
                   type="email"
                   name="email"
@@ -54,7 +54,7 @@ const CR = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm mb-1">Phone</label>
+                <label className="block text-sm mb-1">번호</label>
                 <input
                   type="text"
                   name="phone"
@@ -66,7 +66,7 @@ const CR = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm mb-1">Company</label>
+                <label className="block text-sm mb-1">회사명</label>
                 <input
                   type="text"
                   name="company"
@@ -76,7 +76,7 @@ const CR = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm mb-1">Position</label>
+                <label className="block text-sm mb-1">직급</label>
                 <input
                   type="text"
                   name="position"
@@ -87,7 +87,7 @@ const CR = () => {
               </div>
             </div>
             <div>
-              <label className="block text-sm mb-1">Address</label>
+              <label className="block text-sm mb-1">주소</label>
               <input
                 type="text"
                 name="address"
@@ -97,7 +97,7 @@ const CR = () => {
               />
             </div>
             <div>
-              <label className="block text-sm mb-1">Website</label>
+              <label className="block text-sm mb-1">포트폴리오 사이트</label>
               <input
                 type="text"
                 name="website"
@@ -107,7 +107,7 @@ const CR = () => {
               />
             </div>
             <div>
-              <label className="block text-sm mb-1">Description</label>
+              <label className="block text-sm mb-1">추가 설명</label>
               <textarea
                 name="description"
                 value={formData.description}
@@ -117,7 +117,7 @@ const CR = () => {
               />
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md">
-              Register
+              등록
             </button>
           </form>
         </div>
@@ -125,12 +125,12 @@ const CR = () => {
         {/* Business Card Preview */}
         <div className="bg-zinc-900 p-6 rounded-lg w-80 flex flex-col gap-4">
           <div className="bg-zinc-800 p-4 rounded-lg">
-            <h2 className="text-lg font-bold">{formData.name || "Your Name"}</h2>
-            <p className="text-blue-400">{formData.position || "Position"}</p>
-            <p className="text-gray-400">{formData.company || "Company Name"}</p>
+            <h2 className="text-lg font-bold">{formData.name || "이름"}</h2>
+            <p className="text-blue-400">{formData.position || "직업"}</p>
+            <p className="text-gray-400">{formData.company || "회사명"}</p>
           </div>
           <p className="text-sm text-gray-400">
-            Preview your business card above. The card will update automatically as you fill in the form.
+            명함프리뷰. 양식을 작성하시면 명함이 자동으로 업데이트됩니다.
           </p>
         </div>
       </div>

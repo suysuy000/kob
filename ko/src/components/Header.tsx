@@ -10,7 +10,7 @@ const Header = () => {
             <span></span>
             <Link className="mx-2" to="/rs">헤드 헌팅</Link>
             <span></span>
-            <Link className="mx-2" to="/">마이페이지</Link> 
+            <Link className="mx-2" to="/set">마이페이지</Link> 
           </ul>
         </nav>
       </header>
