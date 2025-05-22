@@ -30,7 +30,7 @@ const Resume: React.FC = () => {
       <main className="flex-1 p-8">
         {/* Profile Card */}
         <div className="bg-gray-800 p-6 rounded-lg relative">
-          <h1 className="text-xl font-bold">Sarah Johnson</h1>
+          <h1 className="text-xl font-bold">Mark Johnson</h1>
           <p className="text-gray-400">Senior Product Designer</p>
           <div className="mt-4">
             <span className="bg-gray-700 px-3 py-1 rounded-lg">UX/UI Design</span>

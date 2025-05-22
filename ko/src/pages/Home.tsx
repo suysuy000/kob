@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Button from "../components/Button";
+import ChatbotButton from "../components/Chatbotbutton";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -47,6 +48,9 @@ const Home = () => {
         성공 가능성과 신뢰도가 높은 채용 결과로 이어집니다.
         </p>
       </section>
+      <div className="relative">
+        <ChatbotButton />
+      </div>
 
     </div>
   );

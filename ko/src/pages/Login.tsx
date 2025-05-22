@@ -29,7 +29,7 @@ const Login: React.FC = () => {
           className="w-full p-3 mb-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"
         />
 
-        <button className="w-full p-3 bg-white text-black font-semibold rounded-lg mb-3">
+        <button onClick={() => navigate("/cr")} className="w-full p-3 bg-white text-black font-semibold rounded-lg mb-3">
           로그인
         </button>
 

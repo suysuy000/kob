@@ -116,7 +116,7 @@ const CR = () => {
                 rows={3}
               />
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md">
+            <button onClick={() => navigate("/bs")} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 rounded-md">
               등록
             </button>
           </form>

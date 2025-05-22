@@ -1,6 +1,7 @@
 import { FaUser, FaNetworkWired, FaEnvelope, FaBell, FaCog, FaGithub, FaStickyNote, FaComments } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import NetworkGraph from "../components/NetworkGraph";
+import Network from "../components/Network";
+
 
 const NetworkPage = () => {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ const NetworkPage = () => {
       </div>
 
       {/* 메인 컨텐츠 */}
-      <NetworkGraph />
+      <Network/>
     </div>
   )
 }
